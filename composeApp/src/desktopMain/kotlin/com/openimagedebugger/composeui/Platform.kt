@@ -1,7 +1,5 @@
 package com.openimagedebugger.composeui
 
-class JVMPlatform {
-    val name: String = "Java ${System.getProperty("java.version")}"
+actual fun getPlatform(): Platform {
+    return Platform(name = "Java ${System.getProperty("java.version")}")
 }
-
-fun getPlatform() = JVMPlatform()
